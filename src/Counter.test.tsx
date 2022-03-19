@@ -15,3 +15,15 @@ test("should render with a custom label", () => {
 	const label = getByTitle("Current Count");
 	expect(label).toBeInTheDocument();
 });
+
+test("Should start at zero", () => {
+	const { getByTitle } = render(<Counter/>);
+	const counter = getByTitle("Current Count");
+	expect(counter).toHaveTextContent("0");
+});
+
+test("Should start at another value", () => {
+	const { getByTitle } = render(<Counter start={10}/>);
+	const counter = getByTitle("Current Count");
+	expect(counter).toHaveTextContent("10");
+});

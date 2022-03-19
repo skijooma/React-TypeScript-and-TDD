@@ -8,4 +8,6 @@ test("renders hello react", () => {
 	expect(linkElement).toBeInTheDocument();
 	const label = getByTitle("Count Label");
 	expect(label).toBeInTheDocument();
+	const counter = getByTitle("Current Count");
+	expect(counter).toHaveTextContent("0");
 });
