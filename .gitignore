@@ -24,3 +24,6 @@ yarn-error.log*
 
 package-lock.json
 .idea/
+
+# Don't commit .editorconfig file
+src/.editorconfig

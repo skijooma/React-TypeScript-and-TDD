@@ -1,16 +1,14 @@
 import React from "react";
-
-export function label(name: string) {
-    return `Hello ${name.toUpperCase()}`
-}
+import { Counter } from "./Counter";
+import { Heading } from "./Heading";
 
 function App() {
-
-    return (
-        <div>
-            <h1>{label("React")}</h1>
-        </div>
-    );
+	return (
+		<div>
+			<Heading />
+			<Counter label={'Current'}/>
+		</div>
+	);
 }
 
 export default App;
